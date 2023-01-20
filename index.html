@@ -1,61 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="style.css">
-    <title>Page d'accueil du magasin de vidéo</title>
-</head>
-<body>
-    <header class = "simo">
-        <img src="d (1).jpg">
-            <p class="ul1">Videos to rent</p>
-            <p class="ul1">Videos to buy</p>
-            <p class="ul1">Used DVDs</p>
-            <p class="ul1">Offers</p>
-    </header>
-    <section class="simo">
-            <p class="yl2">Home</p>
-            <p class="yl2">/</p>
-            <p class="yl2">Used DVDs</p>
-            <p class="yl2">/</p>
-            <p class="yl2">Less than £</p>
-    </section>
-
-    <section>
-        <h1>Videos less than £10</h1>
-        <p id = "nac">Lorem ipsum dolor sit amet,consectetur adipiscing elit.In bibendum non purus quis vestibulum.Pellentesque ultricies quam lacus,ut tristique sapien tristique et.</p>
-    </section>
-    <div class="zero">
-        <section id = "d11">
-            <img class="w1" src="Mon projet (1).jpg">
-            <p id ="p11">Coffee</p>
-            <p class="rr">RRB:£18.99</p>
-            <p>Price you pay <span class="haha">£9.99</span></p>
-            <p class="hoho">your saving £9</p>
-        </section>
-        <section id = "d22">
-            <img class="w1" src="Mon projet (2).jpg">
-            <p id ="p11">cafe and phone</p>
-            <p class="rr">RRB:£18.99</p>
-            <p class="p22">Price you pay <span class="haha">£9.99</span></p>
-            <p class="hoho">your saving £9</p>
-        </section>
-        <section id = "d33">
-            <img class="w1" src="Mon projet.jpg">
-            <p id ="p11">cafe noire</p>
-            <p class="rr">RRB:£18.99</p>
-            <p>Price you pay <span class="haha">£9.99</span></p>
-            <p class="hoho">your saving £9</p>
-        </section>
-        <section id = "d44">
-            <img class="w1" src="Mon projet (3).jpg">
-            <p id ="p11">Kifash tzawaj</p>
-            <p class="rr">RRB:£18.99</p>
-            <p>Price you pay <span class="haha">£9.99</span></p>
-            <p class="hoho">your saving £9</p>
-        </section>
-    </div>
-</body>
-</html>
+<div class="modal fade mt-3" id="modal-t">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form action="./../controller/controller_index/controller_index.php" method="post" id="form-task">
+                        <div class="modal-header">
+						    <input type="" id="task-idd3" name="idd3">
+                            <h5 class="modal-title text-danger">ediit Task</h5>
+                            <a href="#" class="btn-close" data-bs-dismiss="modal"></a>
+                        </div>
+                        <div id="survey_options">
+                            <div class="modal-body">
+                                <label class="form-label">title</label>
+                                <input type="text" name="edittitle_art" class="form-control text-dark text-dark" style="background-color : #DDDDDD" id="task-titl"/>
+                            </div>
+                            <div class="modal-body">
+                                <label class="form-label">name of the artist</label>
+                                <select class="form-select" name="editname_art" style="background-color : #DDDDDD" id="task-priority1">
+                                    <option value="">Please select</option>
+                                    <?php
+                                        $test1 = new addsong();
+                                        $test1->adduser();
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="modal-body">
+                                <label class="form-label">album</label>
+                                <select class="form-select" name="editalbum_art" style="background-color : #DDDDDD" id="task-priorit2">
+                                    <option value="">Please select</option>
+                                    <?php
+                                        $test1 = new addsong();
+                                        $test1->addalbum();
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="modal-body">
+                                <label class="form-label">date</label>
+                                <input type="date" name="editdate_art" class="form-control text-dark" style="background-color : #DDDDDD" id="task-tit"/>
+                            </div>
+                            <div class="modal-body">
+                                <label class="form-label">Words</label>
+                                <input type="text" name="editwords_art" class="form-control text-dark" style="background-color : #DDDDDD" id="task-ti"/>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#" class="btn btn-white" data-bs-dismiss="modal">Cancel</a>
+                            <button type="submit" name="edittask" class="btn btn-primary task-action-btn" id="task-save-btn">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
